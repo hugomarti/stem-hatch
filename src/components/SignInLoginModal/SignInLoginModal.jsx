@@ -19,6 +19,7 @@ const SignInLoginModal = () => {
   return (
     <Box marginRight="1.5rem">
       <Box
+        _hover={{ transform: "translateY(-0.5px)" }}
         onClick={onOpen}
         cursor="pointer"
         as={IoIosPerson}

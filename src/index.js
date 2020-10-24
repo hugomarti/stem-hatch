@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -21,9 +22,11 @@ const theme = extendTheme({
 });
 
 ReactDOM.render(
-  <ChakraProvider theme={theme}>
-    <App />
-  </ChakraProvider>,
+  <BrowserRouter>
+    <ChakraProvider theme={theme}>
+      <App />
+    </ChakraProvider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

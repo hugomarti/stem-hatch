@@ -1,12 +1,15 @@
 import React from "react";
 import { Box, Flex, Image } from "@chakra-ui/core";
+import { useHistory } from "react-router-dom";
 import LogoTypo from "../../assets/logo-typo.svg";
 import { IoMdSettings } from "react-icons/io";
-import { FiShoppingBag } from "react-icons/fi";
+
 import NavDrawer from "../SideMenu/NavDrawer";
 import SignInLoginModal from "../SignInLoginModal/SignInLoginModal";
+import CartDrawer from "../CartDrawer/CartDrawer";
 
 const Navbar = ({ gridColumn, gridRow, bg }) => {
+  const history = useHistory();
   return (
     <Flex
       alignItems="center"
@@ -29,10 +32,16 @@ const Navbar = ({ gridColumn, gridRow, bg }) => {
           <Box mr="1rem" cursor="pointer" display={{ lg: "none", md: "flex" }}>
             <NavDrawer />
           </Box>
-          <Image cursor="pointer" w="7rem" src={LogoTypo} />
+          <Image
+            onClick={() => history.push("/")}
+            cursor="pointer"
+            w="7rem"
+            src={LogoTypo}
+          />
         </Flex>
         <Flex width="65vw" alignItems="center" justifyContent="flex-end">
           <Box
+            _hover={{ transform: "translateY(-0.5px)" }}
             cursor="pointer"
             as={IoMdSettings}
             mr="1.5rem"
@@ -40,12 +49,7 @@ const Navbar = ({ gridColumn, gridRow, bg }) => {
             color="white"
           />
           <SignInLoginModal />
-          <Box
-            cursor="pointer"
-            as={FiShoppingBag}
-            size="1.5rem"
-            color="white"
-          />
+          <CartDrawer />
         </Flex>
       </Flex>
     </Flex>

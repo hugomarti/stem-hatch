@@ -1,6 +1,6 @@
 import React from "react";
-import { Flex, Image, Link, Text, Box, Icon, Grid } from "@chakra-ui/core";
-import { AiOutlinePlayCircle } from "react-icons/ai";
+import { Flex, Link, Text, Grid, Heading } from "@chakra-ui/core";
+import Artwork from "./Artwork";
 
 const Releases = ({ gridRow, gridColumn, data, title, bg }) => {
   return (
@@ -12,9 +12,9 @@ const Releases = ({ gridRow, gridColumn, data, title, bg }) => {
       flexDir="column"
       justifyContent="center"
     >
-      <Text fontWeight="600" mb="1rem">
+      <Heading size="md" mb="1rem">
         {title}
-      </Text>
+      </Heading>
       <Grid
         templateColumns={{
           md: "1fr 1fr 1fr 1fr",
@@ -23,27 +23,15 @@ const Releases = ({ gridRow, gridColumn, data, title, bg }) => {
         gap="1rem"
       >
         {data.map((i) => (
-          <Flex
-            flexDir="column"
-            // flex={{ xl: "0 1 15%", lg: "0 1 20%", md: "25%", base: "0 1 35%" }}
-
-            key={i.id}
-          >
-            <Box position="relative">
-              <Icon
-                top="50%"
-                left="50%"
-                transform="translate(-50%, -50%)"
-                position="absolute"
-                as={AiOutlinePlayCircle}
-                boxSize={10}
-                color="white"
-              />
-              <Image cursor="pointer" src={i.image} />
-            </Box>
-            <Flex pt="0.3rem" height="2.3rem" justifyContent="space-between">
+          <Flex flexDir="column" key={i.id}>
+            <Artwork image={i.image} />
+            <Flex
+              pt="0.3rem"
+              height="2.3rem"
+              alignItems="center"
+              justifyContent="space-between"
+            >
               <Link fontSize={{ md: "sm", base: "sm" }}>{i.artist}</Link>
-
               <Text fontSize="sm" color="yellow.100">
                 ${i.price}
               </Text>

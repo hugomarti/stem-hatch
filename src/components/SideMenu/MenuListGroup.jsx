@@ -1,7 +1,9 @@
 import React from "react";
 import { Flex, Heading, Link, List, ListItem } from "@chakra-ui/core";
+import { useHistory } from "react-router-dom";
 
 const MenuListGroup = ({ title, data, fontSize }) => {
+  const history = useHistory();
   return (
     <Flex marginLeft="1rem" flexDir="column">
       <Heading
@@ -15,7 +17,7 @@ const MenuListGroup = ({ title, data, fontSize }) => {
       <List>
         {data.map((list) => (
           <ListItem fontSize={fontSize} mt="0.3rem" key={list.id}>
-            <Link>{list.title}</Link>
+            <Link onClick={() => history.push(list.route)}>{list.title}</Link>
           </ListItem>
         ))}
       </List>

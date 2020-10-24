@@ -10,13 +10,13 @@ import {
   Image,
   Link,
 } from "@chakra-ui/core";
-import { AiOutlinePlayCircle } from "react-icons/ai";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward, IoIosArrowBack, IoIosPlay } from "react-icons/io";
 import { GiSpeaker } from "react-icons/gi";
 
 const PlayBar = ({ gridColumn, gridRow, bg }) => {
   return (
     <Flex
+      opacity="0.8"
       bg={bg}
       gridColumn={gridColumn}
       gridRow={gridRow}
@@ -39,25 +39,15 @@ const PlayBar = ({ gridColumn, gridRow, bg }) => {
             boxSize={5}
             color="white"
           />
+
           <Icon
             cursor="pointer"
-            as={IoIosArrowBack}
-            boxSize={5}
-            color="white"
-          />
-          <Icon
-            cursor="pointer"
-            as={AiOutlinePlayCircle}
+            as={IoIosPlay}
             boxSize={8}
             color="white"
             mx="1rem"
           />
-          <Icon
-            cursor="pointer"
-            as={IoIosArrowForward}
-            boxSize={5}
-            color="white"
-          />
+
           <Icon
             cursor="pointer"
             as={IoIosArrowForward}

@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, Flex, Heading, Text, Image } from "@chakra-ui/core";
-import ImageWoman from "../assets/hero-woman.jpg";
+import { useHistory } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
-const Hero = ({ gridColumn, gridRow }) => {
+const Hero = ({ gridColumn, gridRow, image }) => {
+  const history = useHistory();
   return (
     <Flex
-      backgroundImage={`url(${ImageWoman})`}
+      backgroundImage={`url(${image})`}
       bgSize="cover"
       bgPos="50% 30%"
       gridColumn={gridColumn}
@@ -18,7 +19,11 @@ const Hero = ({ gridColumn, gridRow }) => {
       <Flex ml="2rem" flexDirection="column">
         <Heading>Royalty Free</Heading>
         <Text my="0.5rem">Sell & Buy Ownership</Text>
-        <Button size="sm" colorScheme="yellow">
+        <Button
+          onClick={() => history.push("/how-it-works")}
+          size="sm"
+          colorScheme="yellow"
+        >
           Start Now
         </Button>
 
@@ -27,10 +32,9 @@ const Hero = ({ gridColumn, gridRow }) => {
           top="2rem"
           right="2rem"
           position="absolute"
-          size="70px"
           objectFit="cover"
           src={Logo}
-          h="6rem"
+          h="5rem"
         />
       </Flex>
     </Flex>

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Button, Grid, Icon } from "@chakra-ui/core";
+import { Grid } from "@chakra-ui/core";
 import {
   featuredReleases,
   ourSelection,
 } from "../components/Releases/releasesData";
-import { GiSoundWaves } from "react-icons/gi";
+import ImageWoman from "../assets/hero-woman.jpg";
 
 import Navbar from "../components/Navbar/Navbar";
 import SideMenuNav from "../components/SideMenu/SideMenuNav";
@@ -12,6 +12,7 @@ import Hero from "../components/Hero";
 import Releases from "../components/Releases/Releases";
 import TopTenSection from "../components/TopTenSection/TopTenSection";
 import PlayBar from "../components/PlayBar";
+import PlayerButton from "../components/PlayerButton/PlayerButton";
 
 const HomePage2 = () => {
   const [showPlayer, setShowPlayer] = useState(false);
@@ -33,7 +34,11 @@ const HomePage2 = () => {
     >
       <Navbar bg={"gray.700"} gridColumn="1/4" gridRow="1/2" />
       <SideMenuNav bg={"gray.700"} gridColumn="1/2" gridRow="2/5" />
-      <Hero gridColumn={{ lg: "2/4", md: "1/4", base: "1/3" }} gridRow="2/3" />
+      <Hero
+        image={ImageWoman}
+        gridColumn={{ lg: "2/4", md: "1/4", base: "1/3" }}
+        gridRow="2/3"
+      />
       <Releases
         bg={"gray.700"}
         data={featuredReleases}
@@ -60,20 +65,10 @@ const HomePage2 = () => {
         gridColumn={{ md: "3/4", base: "2/3" }}
         gridRow={{ md: "4/5", base: "4/5" }}
       />
-      <Button
-        size={{ md: "md", base: "sm" }}
-        colorScheme="yellow"
-        position="fixed"
-        bottom="1rem"
-        right="1rem"
-        zIndex="20"
-        onClick={() => setShowPlayer(!showPlayer)}
-      >
-        <Icon as={GiSoundWaves} boxSize={{ md: 20, base: 8 }} />
-      </Button>
+      <PlayerButton onClick={() => setShowPlayer(!showPlayer)} />
       {showPlayer && (
         <PlayBar
-          bg="rgba(45, 55, 72, 0.8)"
+          bg={"gray.700"}
           gridColumn="1/4"
           gridRow={{ md: "5/6", base: "6/7" }}
         />

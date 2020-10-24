@@ -30,9 +30,9 @@ const NavDrawer = () => {
 
             <DrawerBody>
               <SearchSideMenu />
-              <MenuListGroup fontSize="lg" data={menuListItems} title="Menu" />
+              <MenuListGroup fontSize="sm" data={menuListItems} title="Menu" />
               <MenuListGroup
-                fontSize="lg"
+                fontSize="sm"
                 data={genreListItems}
                 title="Genre"
               />
