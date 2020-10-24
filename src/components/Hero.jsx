@@ -1,9 +1,9 @@
 import React from "react";
-import { Button, Flex, Heading, Text, Image } from "@chakra-ui/core";
+import { Button, Flex, Heading, Text, Image, Box } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
-const Hero = ({ gridColumn, gridRow, image }) => {
+const Hero = ({ gridColumn, gridRow, image, message }) => {
   const history = useHistory();
   return (
     <Flex
@@ -17,16 +17,19 @@ const Hero = ({ gridColumn, gridRow, image }) => {
       position="relative"
     >
       <Flex ml="2rem" flexDirection="column">
-        <Heading>Royalty Free</Heading>
-        <Text my="0.5rem">Sell & Buy Ownership</Text>
-        <Button
-          onClick={() => history.push("/how-it-works")}
-          size="sm"
-          colorScheme="yellow"
-        >
-          Start Now
-        </Button>
-
+        {message && (
+          <Box>
+            <Heading>Royalty Free</Heading>
+            <Text my="0.5rem">Sell & Buy Ownership</Text>
+            <Button
+              onClick={() => history.push("/how-it-works")}
+              size="sm"
+              colorScheme="yellow"
+            >
+              Start Now
+            </Button>
+          </Box>
+        )}
         <Image
           display={{ lg: "none", md: "block" }}
           top="2rem"

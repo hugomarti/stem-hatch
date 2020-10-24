@@ -25,8 +25,8 @@ const HomePage2 = () => {
       }}
       gridTemplateRows={{
         lg: "7vh 0.8fr 2fr 2fr",
-        md: "0.2fr 1fr 2fr 2fr",
-        base: "0.1fr 0.3fr 2fr 0.8fr 2fr",
+        md: "7vh 1fr 2fr 2fr",
+        base: "7vh 0.3fr 2fr 0.8fr 2fr",
       }}
       gap={{ md: "2", base: "0" }}
       width={{ xl: "90vw", md: "100%" }}
@@ -38,6 +38,7 @@ const HomePage2 = () => {
         image={ImageWoman}
         gridColumn={{ lg: "2/4", md: "1/4", base: "1/3" }}
         gridRow="2/3"
+        message={true}
       />
       <Releases
         bg={"gray.700"}
