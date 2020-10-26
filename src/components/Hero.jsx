@@ -3,13 +3,13 @@ import { Button, Flex, Heading, Text, Image, Box } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
-const Hero = ({ gridColumn, gridRow, image, message }) => {
+const Hero = ({ gridColumn, gridRow, image, message, bgPos }) => {
   const history = useHistory();
   return (
     <Flex
       backgroundImage={`url(${image})`}
       bgSize="cover"
-      bgPos="50% 30%"
+      bgPos={bgPos}
       gridColumn={gridColumn}
       gridRow={gridRow}
       justify="start"

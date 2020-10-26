@@ -31,7 +31,9 @@ const Releases = ({ gridRow, gridColumn, data, title, bg }) => {
               alignItems="center"
               justifyContent="space-between"
             >
-              <Link fontSize={{ md: "sm", base: "sm" }}>{i.artist}</Link>
+              <Link fontWeight="500" fontSize={{ md: "sm", base: "sm" }}>
+                {i.artist}
+              </Link>
               <Text fontSize="sm" color="yellow.100">
                 ${i.price}
               </Text>

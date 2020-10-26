@@ -14,7 +14,7 @@ import TopTenSection from "../components/TopTenSection/TopTenSection";
 import PlayBar from "../components/PlayBar";
 import PlayerButton from "../components/PlayerButton/PlayerButton";
 
-const HomePage2 = () => {
+const HomePage = () => {
   const [showPlayer, setShowPlayer] = useState(false);
   return (
     <Grid
@@ -39,6 +39,7 @@ const HomePage2 = () => {
         gridColumn={{ lg: "2/4", md: "1/4", base: "1/3" }}
         gridRow="2/3"
         message={true}
+        bgPos="50% 30%"
       />
       <Releases
         bg={"gray.700"}
@@ -78,4 +79,4 @@ const HomePage2 = () => {
   );
 };
 
-export default HomePage2;
+export default HomePage;

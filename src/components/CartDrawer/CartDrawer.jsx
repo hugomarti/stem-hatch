@@ -22,7 +22,7 @@ const CartDrawer = () => {
     <Box>
       <Box position="relative" cursor="pointer" onClick={onOpen} mr="0.5rem">
         <Box
-          _hover={{ transform: "translateY(-0.5px)" }}
+          _hover={{ transform: "translateY(-0.1rem)" }}
           as={FiShoppingBag}
           size="1.5rem"
           color="white"

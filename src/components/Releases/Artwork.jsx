@@ -15,7 +15,7 @@ const Artwork = ({ image }) => {
   return (
     <ArtworkContainer
       position="relative"
-      _hover={{ transform: "translateY(-0.5px)" }}
+      _hover={{ transform: "translateY(-0.1rem)" }}
       // boxShadow=" 0.5px 0.5px 7px #171923"
     >
       <Image cursor="pointer" src={image} />
@@ -32,7 +32,7 @@ const Artwork = ({ image }) => {
           alignItems="center"
           w="20%"
           h="100%"
-          bg="gray.600"
+          bg="gray.700"
           opacity="0.8"
           _hover={{ opacity: "1" }}
         >

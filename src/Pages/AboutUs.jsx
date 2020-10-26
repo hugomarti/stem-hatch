@@ -21,7 +21,7 @@ const AboutUs = () => {
       gridTemplateRows={{
         lg: "7vh 0.8fr 2fr",
         md: "7vh 0.8fr 3fr",
-        base: "7vh 0.2fr 3fr",
+        base: "7vh 0.6fr 3fr",
       }}
       gap={{ md: "2", base: "0" }}
       width={{ xl: "90vw", md: "100%" }}
@@ -34,6 +34,7 @@ const AboutUs = () => {
         gridColumn={{ lg: "2/4", md: "1/4", base: "1/4" }}
         gridRow="2/3"
         message={false}
+        bgPos="50% 50%"
       />
       <AboutUsSection gridColumn="2/4" gridRow="3/4" />
       <PlayerButton onClick={() => setShowPlayer(!showPlayer)} />

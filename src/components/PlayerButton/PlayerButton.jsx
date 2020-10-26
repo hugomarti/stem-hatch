@@ -16,7 +16,7 @@ const PlayerButton = ({ onClick }) => {
       _hover={{ transform: "translateY(-0.3rem)", opacity: 1 }}
       boxShadow="5px 5px 20px"
     >
-      <Icon as={GiSoundWaves} boxSize={{ md: 20, base: 8 }} />
+      <Icon as={GiSoundWaves} boxSize={{ md: 20, base: 10 }} />
     </Button>
   );
 };

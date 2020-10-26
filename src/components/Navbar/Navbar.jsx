@@ -41,7 +41,7 @@ const Navbar = ({ gridColumn, gridRow, bg }) => {
         </Flex>
         <Flex width="65vw" alignItems="center" justifyContent="flex-end">
           <Box
-            _hover={{ transform: "translateY(-0.5px)" }}
+            _hover={{ transform: "translateY(-0.1rem)" }}
             cursor="pointer"
             as={IoMdSettings}
             mr="1.5rem"
