@@ -24,8 +24,9 @@ const HomePage = () => {
         base: "1fr 1fr",
       }}
       gridTemplateRows={{
+        xl: "7vh 1fr 2fr 2fr",
         lg: "7vh 0.8fr 2fr 2fr",
-        md: "7vh 1fr 2fr 2fr",
+        md: "7vh 0.8fr 2fr 2fr",
         base: "7vh 0.3fr 2fr 0.8fr 2fr",
       }}
       gap={{ md: "2", base: "0" }}

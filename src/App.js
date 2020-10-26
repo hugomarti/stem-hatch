@@ -1,7 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+
 import AboutUs from "./Pages/AboutUs";
 import HomePage from "./Pages/HomePage";
+import Tracks from "./Pages/Tracks";
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/how-it-works" component={AboutUs} />
+        <Route path="/tracks" component={Tracks} />
       </Switch>
     </div>
   );

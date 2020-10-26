@@ -1,16 +1,21 @@
 export const menuListItems = [
   {
     id: 1,
-    title: "Explore",
-    route: "/tracks",
+    title: "Home",
+    route: "/",
   },
   {
     id: 2,
+    title: "Tracks",
+    route: "/tracks",
+  },
+  {
+    id: 3,
     title: "Artist",
     route: "/artists",
   },
   {
-    id: 3,
+    id: 4,
     title: "How it works",
     route: "/how-it-works",
   },

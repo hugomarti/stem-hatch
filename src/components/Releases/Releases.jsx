@@ -17,6 +17,8 @@ const Releases = ({ gridRow, gridColumn, data, title, bg }) => {
       </Heading>
       <Grid
         templateColumns={{
+          xl: "1fr 1fr 1fr 1fr 1fr 1fr",
+          lg: "1fr 1fr 1fr 1fr",
           md: "1fr 1fr 1fr 1fr",
           base: "1fr 1fr",
         }}
