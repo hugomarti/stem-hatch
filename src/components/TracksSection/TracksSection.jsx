@@ -1,15 +1,14 @@
 import React from "react";
 import { Box, Flex, Grid, Link, Text } from "@chakra-ui/core";
-import { tracks } from "../Releases/releasesData";
 import TrackCard from "./TrackCard";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 
-const TracksSection = ({ gridColumn, gridRow }) => {
+const TracksSection = ({ gridColumn, gridRow, data, bg }) => {
   return (
     <Flex
       p="1rem"
       flexDir="column"
-      bg="gray.700"
+      bg={bg}
       gridColumn={gridColumn}
       gridRow={gridRow}
     >
@@ -23,7 +22,7 @@ const TracksSection = ({ gridColumn, gridRow }) => {
         flexDir="column"
         gap="1rem"
       >
-        {tracks.map((track) => (
+        {data.map((track) => (
           <TrackCard track={track} />
         ))}
       </Grid>

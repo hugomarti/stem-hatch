@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Grid } from "@chakra-ui/core";
+import { tracks } from "../components/Releases/releasesData";
 
 import Navbar from "../components/Navbar/Navbar";
 import SideMenuNav from "../components/SideMenu/SideMenuNav";
@@ -30,6 +31,7 @@ const AboutUs = () => {
       <Navbar bg={"gray.700"} gridColumn="1/4" gridRow="1/2" />
       <SideMenuNav bg={"gray.700"} gridColumn="1/2" gridRow="2/5" />
       <TracksSection
+        data={tracks}
         bg={"gray.700"}
         gridColumn={{ lg: "2/3", md: "1/2", base: "1/2" }}
         gridRow="2/3"

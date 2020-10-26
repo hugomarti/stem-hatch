@@ -3,7 +3,14 @@ import { Button, Flex, Heading, Text, Image, Box } from "@chakra-ui/core";
 import { useHistory } from "react-router-dom";
 import Logo from "../assets/logo.svg";
 
-const Hero = ({ gridColumn, gridRow, image, message, bgPos }) => {
+const Hero = ({
+  gridColumn,
+  gridRow,
+  image,
+  homePageMessage,
+  genreTitle,
+  bgPos,
+}) => {
   const history = useHistory();
   return (
     <Flex
@@ -17,7 +24,7 @@ const Hero = ({ gridColumn, gridRow, image, message, bgPos }) => {
       position="relative"
     >
       <Flex ml="2rem" flexDirection="column">
-        {message && (
+        {homePageMessage && (
           <Box>
             <Heading>Royalty Free</Heading>
             <Text my="0.5rem">Sell & Buy Ownership</Text>
@@ -30,6 +37,7 @@ const Hero = ({ gridColumn, gridRow, image, message, bgPos }) => {
             </Button>
           </Box>
         )}
+        {genreTitle && <Heading>{genreTitle}</Heading>}
         <Image
           display={{ lg: "none", md: "block" }}
           top="2rem"
