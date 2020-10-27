@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid } from "@chakra-ui/core";
+import { Flex, Grid, Tabs, TabList, Tab } from "@chakra-ui/core";
 import {
   featuredReleases,
   ourSelection,
@@ -25,7 +25,7 @@ const HomePage = () => {
       }}
       gridTemplateRows={{
         xl: "7vh 1fr 2fr 2fr",
-        lg: "7vh 0.8fr 2fr 2fr",
+        lg: "7vh 0.6fr 7vh 2fr 2fr",
         md: "7vh 0.8fr 2fr 2fr",
         base: "7vh 0.3fr 2fr 0.8fr 2fr",
       }}
@@ -42,31 +42,40 @@ const HomePage = () => {
         homePageMessage={true}
         bgPos="50% 30%"
       />
+      <Flex pl="1rem" bg="gray.700" gridRow="3/4" gridColumn="2/3">
+        <Tabs>
+          <TabList>
+            <Tab>Selections</Tab>
+            <Tab>Tracks</Tab>
+            <Tab>Artists</Tab>
+          </TabList>
+        </Tabs>
+      </Flex>
       <Releases
         bg={"gray.700"}
         data={featuredReleases}
         title="Featured Tracks"
         gridColumn={{ lg: "2/3", md: "1/3", base: "1/3" }}
-        gridRow="3/4"
+        gridRow="4/5"
       />
       <Releases
         bg={"gray.700"}
         data={ourSelection}
         title="Our Selection"
         gridColumn={{ lg: "2/3", md: "1/3", base: "1/3" }}
-        gridRow={{ md: "4/5", base: "5/6" }}
+        gridRow={{ md: "5/6", base: "5/6" }}
       />
       <TopTenSection
         bg={"gray.700"}
         title="Top 10 House Artists"
         gridColumn={{ md: "3/4", base: "1/2" }}
-        gridRow={{ md: "3/4", base: "4/5" }}
+        gridRow={{ md: "3/5", base: "4/5" }}
       />
       <TopTenSection
         bg={"gray.700"}
         title="Top 10 Techno Artists"
         gridColumn={{ md: "3/4", base: "2/3" }}
-        gridRow={{ md: "4/5", base: "4/5" }}
+        gridRow={{ md: "5/6", base: "4/5" }}
       />
       <PlayerButton onClick={() => setShowPlayer(!showPlayer)} />
       {showPlayer && (
